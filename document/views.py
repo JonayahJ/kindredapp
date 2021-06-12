@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Document
+# from .forms import DocumentForm
 
 # Create your views here.
 
@@ -36,6 +37,8 @@ def editor(request):
         "document": document
     }
 
+    # Form
+    # form = DocumentForm()
     return render(request, "editor.html", context)
 
 def delete_document(request, docid):
